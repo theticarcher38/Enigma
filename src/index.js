@@ -21,3 +21,9 @@ var hashStr = stringToHash(randString);
 
 console.log(hashStr);
 
+fs.appendFile("./database.txt", 
+`plaintext: ${randString}
+ciphertext: ${hashStr}\n\n
+`, function(err) {
+    if (err) throw err;
+});
