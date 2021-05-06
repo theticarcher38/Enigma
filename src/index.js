@@ -1,5 +1,5 @@
 const fs = require('fs');
-var randString = Math.random().toString(36).replace(/[^a-zA-Z0-9]+/g, '').substr(0, 300);
+var randString = Math.random().toString(36).replace(/[^a-zA-Z0-9]+/g, '').substr(0, 25);
 
 console.log(randString);
 
@@ -23,7 +23,7 @@ console.log(hashStr);
 
 fs.appendFile("./database.txt", 
 `plaintext: ${randString}
-ciphertext: ${hashStr}\n\n
+hashtext: ${hashStr}\n\n
 `, function(err) {
     if (err) throw err;
 });
